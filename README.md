@@ -1,28 +1,65 @@
 # fashion_mnist_classification
-# Deep Learning with PyTorch
-
+Deep Learning with PyTorch
 This project is part of the AI Engineering course module "Deep Learning with PyTorch".
 
-## Overview
+Overview
+This repository implements a convolutional neural network (CNN) using PyTorch to classify images from the Fashion MNIST dataset. The images are resized to 16x16 pixels before being processed by the network. The CNN model incorporates batch normalization to improve training stability and accuracy.
 
-The project implements a convolutional neural network (CNN) with batch normalization to classify Fashion MNIST images resized to 16x16 pixels.
+Features
+Resizes Fashion MNIST images to 16x16 pixels
 
-## Features
+Applies data transformations including tensor conversion
 
-- Preprocessing with resizing and tensor conversion
-- CNN architecture with two convolutional layers plus batch normalization
-- Training with cross-entropy loss and SGD optimizer
-- Validation accuracy evaluation after each epoch
-- Visualization of sample images and training results
+CNN with two convolutional layers and batch normalization
 
-## Environment and Dependencies
+Max pooling layers to reduce spatial dimensions
 
-- Python 3.7 or later
-- PyTorch
-- torchvision
-- matplotlib
+Trains using cross-entropy loss and SGD optimizer
 
-## Usage
+Evaluates validation accuracy after each epoch
 
-Run the training and evaluation with:
+Visualizes sample images and training progress with matplotlib
 
+Requirements
+Python 3.7 or later
+
+PyTorch (torch)
+
+torchvision
+
+matplotlib
+
+All dependencies can be installed via:
+
+bash
+pip install -r requirements.txt
+Usage
+To run the training and evaluation, simply execute:
+
+bash
+python fashion_mnist_cnn.py
+The script will:
+
+Download the Fashion MNIST dataset if not already present
+
+Resize and preprocess images
+
+Train the CNN model for 5 epochs by default
+
+Display a few sample images from the validation set
+
+Show training loss and validation accuracy per epoch
+
+Plot the training loss and accuracy curves after training
+
+Project Structure
+fashion_mnist_cnn.py: Main Python script implementing data loading, model, training, and visualization
+
+requirements.txt: Lists the Python dependencies needed
+
+.gitignore: Specifies files and directories to exclude from version control
+
+README.md: This file, project overview and usage instructions
+
+Notes
+This implementation is designed for educational purposes in the context of the AI Engineering course. It demonstrates key PyTorch concepts including dataset transforms, CNN construction, batch normalization, training loops, and performance plotting.
